@@ -31,6 +31,7 @@ public class BubbleItemUI : MonoBehaviour
     private void Awake()
     {
         button.onClick.AddListener(HandleOnClick);
+        GameEvents.OnCleanFromHoax += HandleOnCleanFromHoax;
         GameEvents.OnGameOver += HandleOnGameOver;
         GameEvents.OnFinishLevel += HandleOnFinishLevel;
     }
@@ -38,6 +39,7 @@ public class BubbleItemUI : MonoBehaviour
     private void OnDestroy()
     {
         button.onClick.RemoveListener(HandleOnClick);
+        GameEvents.OnCleanFromHoax -= HandleOnCleanFromHoax;
         GameEvents.OnGameOver -= HandleOnGameOver;
         GameEvents.OnFinishLevel -= HandleOnFinishLevel;
     }
@@ -111,6 +113,11 @@ public class BubbleItemUI : MonoBehaviour
     {
         animator.SetTrigger("Tap");
         StartCoroutine(ClickProcess(0.5f));
+    }
+
+    private void HandleOnCleanFromHoax()
+    {
+        animator.SetTrigger("Tap");
     }
 
     private void HandleOnGameOver(GameOverReason reason)

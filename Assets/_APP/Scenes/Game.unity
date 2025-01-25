@@ -175,10 +175,10 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 240, y: 190}
+  m_CellSize: {x: 240, y: 280}
   m_Spacing: {x: 10, y: 10}
   m_Constraint: 2
-  m_ConstraintCount: 3
+  m_ConstraintCount: 2
 --- !u!224 &431143394 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5562113459336086622, guid: 33663927fa58d704fa988b805c476e8d, type: 3}
@@ -781,7 +781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgMorality: {fileID: 1988286479}
   sliderMorality: {fileID: 431143395}
-  parentBubble: {fileID: 204895772}
+  parentBubble: {fileID: 204895773}
   prefabBubble: {fileID: 5403968410508004733, guid: 7e8fce29cc03f364290674855dbeeba8, type: 3}
   balancingBarUI: {fileID: 1165728229}
   gameOverUI: {fileID: 5230354668533841432}

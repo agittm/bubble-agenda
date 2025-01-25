@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47318d52d67384e4884ccc0faadaa552, type: 3}
   m_Name: GameplaySettings
   m_EditorClassIdentifier: 
-  gridSize: {x: 4, y: 3}
   defaultHoaxTime: 5
   defaultBrandingTime: 7
   defaultSmileyTime: 8
@@ -20,22 +19,46 @@ MonoBehaviour:
   costMorality: 1
   initialMoral: 0
   maxMoral: 10
+  grid2CountToSize: {x: 280, y: 280}
+  grid3CountToSize: {x: 240, y: 190}
   levelDatas:
-  - currentStereotypeCount: 1
+  - gridSize: {x: 2, y: 2}
+    opinionTypeCount: 2
+    currentStereotypeCount: 1
     currentSideCount: 1
     currentMinMaxSide: {x: 4, y: 4}
-  - currentStereotypeCount: 2
+  - gridSize: {x: 3, y: 2}
+    opinionTypeCount: 2
+    currentStereotypeCount: 2
     currentSideCount: 1
     currentMinMaxSide: {x: 4, y: 4}
-  - currentStereotypeCount: 3
+  - gridSize: {x: 3, y: 2}
+    opinionTypeCount: 4
+    currentStereotypeCount: 2
+    currentSideCount: 1
+    currentMinMaxSide: {x: 4, y: 4}
+  - gridSize: {x: 3, y: 2}
+    opinionTypeCount: 4
+    currentStereotypeCount: 3
     currentSideCount: 3
     currentMinMaxSide: {x: 4, y: 4}
-  - currentStereotypeCount: 4
+  - gridSize: {x: 4, y: 3}
+    opinionTypeCount: 4
+    currentStereotypeCount: 3
     currentSideCount: 3
     currentMinMaxSide: {x: 4, y: 4}
-  - currentStereotypeCount: 5
+  - gridSize: {x: 4, y: 3}
+    opinionTypeCount: 4
+    currentStereotypeCount: 4
     currentSideCount: 3
     currentMinMaxSide: {x: 4, y: 4}
-  - currentStereotypeCount: 6
+  - gridSize: {x: 4, y: 3}
+    opinionTypeCount: 4
+    currentStereotypeCount: 5
+    currentSideCount: 3
+    currentMinMaxSide: {x: 4, y: 4}
+  - gridSize: {x: 4, y: 3}
+    opinionTypeCount: 4
+    currentStereotypeCount: 6
     currentSideCount: 3
     currentMinMaxSide: {x: 4, y: 4}

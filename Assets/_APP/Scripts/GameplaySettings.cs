@@ -3,9 +3,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class GameplaySettings : ScriptableObject
 {
-    [SerializeField] private Vector2Int gridSize;
-    public Vector2Int GridSize => gridSize;
-
     [SerializeField] private float defaultHoaxTime;
     public float DefaultHoaxTime => defaultHoaxTime;
 
@@ -26,6 +23,12 @@ public class GameplaySettings : ScriptableObject
 
     [SerializeField] private int maxMoral = 10;
     public int MaxMoral => maxMoral;
+
+    [SerializeField] private Vector2 grid2CountToSize;
+    public Vector2 Grid2CountToSize => grid2CountToSize;
+
+    [SerializeField] private Vector2 grid3CountToSize;
+    public Vector2 Grid3CountToSize => grid3CountToSize;
 
     [SerializeField] private GameLevelData[] levelDatas;
     public GameLevelData[] LevelDatas => levelDatas;

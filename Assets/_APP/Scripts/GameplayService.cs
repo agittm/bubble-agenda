@@ -22,11 +22,13 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
         this.settings = settings;
         this.stereotypeDatabase = stereotypeDatabase;
 
-        spawnedBubbles = new BubbleItemUI[settings.GridSize.x * settings.GridSize.y];
+        spawnedBubbles = new BubbleItemUI[currentLevel.GridSize.x * currentLevel.GridSize.y];
     }
 
     void IInitializable.Initialize()
     {
+        GameEvents.OnFullOfHoax += HandleOnFullOfHoax;
+        GameEvents.OnCleanFromHoax += HandleOnCleanFromHoax;
         GameEvents.OnGameOver += HandleOnGameOver;
         GameEvents.OnFinishLevel += HandleOnFinishLevel;
 
@@ -48,6 +50,8 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
 
     void IDisposable.Dispose()
     {
+        GameEvents.OnFullOfHoax -= HandleOnFullOfHoax;
+        GameEvents.OnCleanFromHoax -= HandleOnCleanFromHoax;
         GameEvents.OnGameOver -= HandleOnGameOver;
         GameEvents.OnFinishLevel -= HandleOnFinishLevel;
 
@@ -64,7 +68,17 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
         view.sliderMorality.maxValue = settings.MaxMoral;
         view.sliderMorality.value = settings.InitialMoral;
 
-        SpawnBubbles(settings.GridSize.x * settings.GridSize.y);
+        view.parentBubble.constraintCount = currentLevel.GridSize.y;
+        if (currentLevel.GridSize.y == 2)
+        {
+            view.parentBubble.cellSize = settings.Grid2CountToSize;
+        }
+        else if (currentLevel.GridSize.y == 3)
+        {
+            view.parentBubble.cellSize = settings.Grid3CountToSize;
+        }
+
+        SpawnBubbles(currentLevel.GridSize.x * currentLevel.GridSize.y);
     }
 
     private void SpawnBubbles(int count)
@@ -105,6 +119,7 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
                 break;
             case OpinionType.Notes:
             case OpinionType.HateSpeech:
+                side = Side.Neutral;
                 timelimit = settings.DefaultSmileyTime;
                 break;
         }
@@ -113,7 +128,7 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
 
         // Build
         BubbleData data = new BubbleData(side, opinion, stereotype);
-        BubbleItemUI ui = UnityEngine.Object.Instantiate(view.prefabBubble, view.parentBubble);
+        BubbleItemUI ui = UnityEngine.Object.Instantiate(view.prefabBubble, view.parentBubble.transform);
         ui.Init(HandleOnClickBubble, HandleOnBubbleTimeout);
         ui.SetData(data);
 
@@ -136,7 +151,7 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
             }
         }
 
-        spawnedBubbles = new BubbleItemUI[settings.GridSize.x * settings.GridSize.y];
+        spawnedBubbles = new BubbleItemUI[currentLevel.GridSize.x * currentLevel.GridSize.y];
     }
 
     private void ClickBubble(BubbleItemUI ui)
@@ -169,11 +184,11 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
         }
         else if (ui.Data.Side == Side.Neutral)
         {
-            if (ui.Data.Opinion.Type == OpinionType.Branding)
+            if (ui.Data.Opinion.Type == OpinionType.Branding || ui.Data.Opinion.Type == OpinionType.Notes)
             {
                 view.sliderMorality.value--;
             }
-            else if (ui.Data.Opinion.Type == OpinionType.Hoax)
+            else if (ui.Data.Opinion.Type == OpinionType.Hoax || ui.Data.Opinion.Type == OpinionType.HateSpeech)
             {
                 view.sliderMorality.value++;
             }
@@ -208,7 +223,7 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
             int index = ui.Index;
             int power = GetPower(ui);
 
-            if (i == index - 1 || i == index + 1 || i == index + settings.GridSize.y || i == index - settings.GridSize.y)
+            if (i == index - 1 || i == index + 1 || i == index + currentLevel.GridSize.y || i == index - currentLevel.GridSize.y)
             {
                 chance += 0.25f;
 
@@ -256,6 +271,46 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
         BubbleItemUI newUI = SpawnBubble(opinionType);
         newUI.SetIndex(index);
         spawnedBubbles[index] = newUI;
+
+        if (IsCleanFromHoax())
+        {
+            GameEvents.OnCleanFromHoax?.Invoke();
+        }
+        else if (IsFullOfSameHoax())
+        {
+            GameEvents.OnFullOfHoax?.Invoke(ui.Data.Side);
+        }
+    }
+
+    private bool IsCleanFromHoax()
+    {
+        for (int i = 0; i < spawnedBubbles.Length; i++)
+        {
+            if (spawnedBubbles[i].Data.Opinion.Type == OpinionType.Hoax)
+                return false;
+        }
+
+        return true;
+    }
+
+    private bool IsFullOfSameHoax()
+    {
+        Side side = Side.Neutral;
+
+        for (int i = 0; i < spawnedBubbles.Length; i++)
+        {
+            if (spawnedBubbles[i].Data.Opinion.Type != OpinionType.Hoax)
+                return false;
+            else
+            {
+                if (side == Side.Neutral)
+                    side = spawnedBubbles[i].Data.Side;
+                else if (side != spawnedBubbles[i].Data.Side)
+                    return false;
+            }
+        }
+
+        return true;
     }
 
     private int GetPower(BubbleItemUI ui)
@@ -272,11 +327,11 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
         {
             result += basePower;
         }
-        if (index - settings.GridSize.y >= 0 && spawnedBubbles[index - settings.GridSize.y].Data.Stereotype == ui.Data.Stereotype)
+        if (index - currentLevel.GridSize.y >= 0 && spawnedBubbles[index - currentLevel.GridSize.y].Data.Stereotype == ui.Data.Stereotype)
         {
             result += basePower;
         }
-        if (index + settings.GridSize.y < spawnedBubbles.Length && spawnedBubbles[index + settings.GridSize.y].Data.Stereotype == ui.Data.Stereotype)
+        if (index + currentLevel.GridSize.y < spawnedBubbles.Length && spawnedBubbles[index + currentLevel.GridSize.y].Data.Stereotype == ui.Data.Stereotype)
         {
             result += basePower;
         }
@@ -304,6 +359,34 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
     private void HandleOnSliderMoralityValueChanged(float value)
     {
         view.bgMorality.SetInteger("Moral", Mathf.RoundToInt(value));
+    }
+
+    private void HandleOnFullOfHoax(Side side)
+    {
+        if (side == Side.Left)
+        {
+            view.balancingBarUI.AddLeftValue(-settings.CostBalance);
+        }
+        else if (side == Side.Right)
+        {
+            view.balancingBarUI.AddRightValue(-settings.CostBalance);
+        }
+
+        SpawnBubbles(currentLevel.GridSize.x * currentLevel.GridSize.y);
+    }
+
+    private void HandleOnCleanFromHoax()
+    {
+        if (view.balancingBarUI.LeftValue < view.balancingBarUI.RightValue)
+        {
+            view.balancingBarUI.AddLeftValue(settings.CostBalance);
+        }
+        else if (view.balancingBarUI.RightValue < view.balancingBarUI.LeftValue)
+        {
+            view.balancingBarUI.AddRightValue(settings.CostBalance);
+        }
+
+        SpawnBubbles(currentLevel.GridSize.x * currentLevel.GridSize.y);
     }
 
     private void HandleOnGameOver(GameOverReason reason)

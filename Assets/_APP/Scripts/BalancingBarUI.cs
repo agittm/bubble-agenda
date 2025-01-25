@@ -23,6 +23,9 @@ public class BalancingBarUI : MonoBehaviour
 
     public void SetLeftValue(int value)
     {
+        if (!gameObject.activeInHierarchy)
+            return;
+
         leftValue = value;
         rightValue = 100 - value;
         UpdateUI();
@@ -35,6 +38,9 @@ public class BalancingBarUI : MonoBehaviour
 
     public void SetRightValue(int value)
     {
+        if (!gameObject.activeInHierarchy)
+            return;
+
         rightValue = value;
         leftValue = 100 - value;
         UpdateUI();

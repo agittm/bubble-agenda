@@ -3,6 +3,9 @@
 [System.Serializable]
 public class GameLevelData
 {
+    [SerializeField] private Vector2Int gridSize;
+    public Vector2Int GridSize => gridSize;
+
     [SerializeField] private int opinionTypeCount = 2;
     public int OpinionTypeCount => opinionTypeCount;
 
