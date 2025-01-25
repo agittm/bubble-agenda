@@ -12,9 +12,9 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
     private readonly StereotypeDatabase stereotypeDatabase;
 
     private BubbleItemUI[] spawnedBubbles;
-
-    private int currentColoredOpinionCount = 0;
-    private Vector2Int currentMinMaxColoredOpinion = new Vector2Int(2, 3);
+    private int[] sideCount = new int[3];
+    private int currentLevelIndex = 0;
+    private GameLevelData currentLevel => settings.LevelDatas[currentLevelIndex];
 
     public GameplayService(GameplayView view, GameplaySettings settings, StereotypeDatabase stereotypeDatabase)
     {
@@ -28,19 +28,17 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
     void IInitializable.Initialize()
     {
         GameEvents.OnGameOver += HandleOnGameOver;
+        GameEvents.OnFinishLevel += HandleOnFinishLevel;
 
+        view.sliderMorality.onValueChanged.AddListener(HandleOnSliderMoralityValueChanged);
         view.gameOverUI.Init(HandleOnRestartGame);
+        view.levelCompleteUI.Init(HandleOnNextLevel);
     }
 
     void IStartable.Start()
     {
-        view.gameOverUI.gameObject.SetActive(false);
-
-        view.sliderMorality.minValue = 0;
-        view.sliderMorality.maxValue = settings.MaxMoral;
-        view.sliderMorality.value = settings.InitialMoral;
-
-        SpawnBubbles(settings.GridSize.x * settings.GridSize.y);
+        currentLevelIndex = 0;
+        StartGame();
     }
 
     void ITickable.Tick()
@@ -51,11 +49,22 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
     void IDisposable.Dispose()
     {
         GameEvents.OnGameOver -= HandleOnGameOver;
+        GameEvents.OnFinishLevel -= HandleOnFinishLevel;
+
+        view.sliderMorality.onValueChanged.RemoveListener(HandleOnSliderMoralityValueChanged);
     }
 
-    private void HandleOnGameOver(GameOverReason reason)
+    private void StartGame()
     {
-        view.gameOverUI.gameObject.SetActive(true);
+        view.gameOverUI.gameObject.SetActive(false);
+        view.levelCompleteUI.gameObject.SetActive(false);
+        view.balancingBarUI.gameObject.SetActive(currentLevel.CurrentSideCount > 1);
+
+        view.sliderMorality.minValue = 0;
+        view.sliderMorality.maxValue = settings.MaxMoral;
+        view.sliderMorality.value = settings.InitialMoral;
+
+        SpawnBubbles(settings.GridSize.x * settings.GridSize.y);
     }
 
     private void SpawnBubbles(int count)
@@ -70,26 +79,51 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
         }
     }
 
-    private BubbleItemUI SpawnBubble()
+    private BubbleItemUI SpawnBubble(OpinionType opinionType)
     {
-        Side side = Side.Neutral;
-        bool isNeutral = UnityEngine.Random.value >= 0.5f;
-        if (currentColoredOpinionCount < currentMinMaxColoredOpinion.x || (!isNeutral && currentColoredOpinionCount < currentMinMaxColoredOpinion.y))
+        // Randomize Side
+        Side side = (Side)UnityEngine.Random.Range(0, currentLevel.CurrentSideCount);
+        //while (sideCount[(int)side] >= currentMinMaxSide.y)
+        //{
+        //    side = (Side)UnityEngine.Random.Range(0, 3);
+        //}
+
+        sideCount[(int)side]++;
+
+        // Randomize Stereotype
+        Stereotype stereotype = stereotypeDatabase.GetRandom(currentLevel.CurrentStereotypeCount);
+
+        // Randomize Opinion
+        float timelimit = 0;
+        switch (opinionType)
         {
-            side = UnityEngine.Random.value >= 0.5f ? Side.Left : Side.Right;
-            currentColoredOpinionCount++;
+            case OpinionType.Branding:
+                timelimit = settings.DefaultBrandingTime;
+                break;
+            case OpinionType.Hoax:
+                timelimit = settings.DefaultHoaxTime;
+                break;
+            case OpinionType.Notes:
+            case OpinionType.HateSpeech:
+                timelimit = settings.DefaultSmileyTime;
+                break;
         }
+        timelimit *= stereotype.TimeMultiplier;
+        Opinion opinion = new Opinion(opinionType, timelimit);
 
-        OpinionType opinion = UnityEngine.Random.value >= 0.5f ? OpinionType.Branding : OpinionType.Hoax;
-        Stereotype stereotype = stereotypeDatabase.GetRandom();
+        // Build
         BubbleData data = new BubbleData(side, opinion, stereotype);
-
         BubbleItemUI ui = UnityEngine.Object.Instantiate(view.prefabBubble, view.parentBubble);
         ui.Init(HandleOnClickBubble, HandleOnBubbleTimeout);
         ui.SetData(data);
 
         GameEvents.OnSpawnBubble?.Invoke(ui);
         return ui;
+    }
+
+    private BubbleItemUI SpawnBubble()
+    {
+        return SpawnBubble((OpinionType)UnityEngine.Random.Range(0, currentLevel.OpinionTypeCount));
     }
 
     private void ClearBubbles()
@@ -109,12 +143,12 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
     {
         if (ui.Data.Side == Side.Left)
         {
-            if (ui.Data.OpinionType == OpinionType.Branding)
+            if (ui.Data.Opinion.Type == OpinionType.Branding)
             {
                 view.balancingBarUI.AddLeftValue(-settings.CostBalance);
                 view.sliderMorality.value--;
             }
-            else if (ui.Data.OpinionType == OpinionType.Hoax)
+            else if (ui.Data.Opinion.Type == OpinionType.Hoax)
             {
                 view.balancingBarUI.AddLeftValue(settings.CostBalance);
                 view.sliderMorality.value++;
@@ -122,12 +156,12 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
         }
         else if (ui.Data.Side == Side.Right)
         {
-            if (ui.Data.OpinionType == OpinionType.Branding)
+            if (ui.Data.Opinion.Type == OpinionType.Branding)
             {
                 view.balancingBarUI.AddRightValue(-settings.CostBalance);
                 view.sliderMorality.value--;
             }
-            else if (ui.Data.OpinionType == OpinionType.Hoax)
+            else if (ui.Data.Opinion.Type == OpinionType.Hoax)
             {
                 view.balancingBarUI.AddRightValue(settings.CostBalance);
                 view.sliderMorality.value++;
@@ -135,11 +169,11 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
         }
         else if (ui.Data.Side == Side.Neutral)
         {
-            if (ui.Data.OpinionType == OpinionType.Branding)
+            if (ui.Data.Opinion.Type == OpinionType.Branding)
             {
                 view.sliderMorality.value--;
             }
-            else if (ui.Data.OpinionType == OpinionType.Hoax)
+            else if (ui.Data.Opinion.Type == OpinionType.Hoax)
             {
                 view.sliderMorality.value++;
             }
@@ -153,6 +187,11 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
         {
             GameEvents.OnGameOver?.Invoke(GameOverReason.Imbalance);
         }
+        else if (view.sliderMorality.value == view.sliderMorality.maxValue &&
+            view.balancingBarUI.LeftValue==view.balancingBarUI.RightValue)
+        {
+            GameEvents.OnFinishLevel?.Invoke();
+        }
         else
         {
             GameEvents.OnSelectBubble?.Invoke(ui);
@@ -162,6 +201,8 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
 
     private void SpreadBubble(BubbleItemUI ui)
     {
+        float chance = 0f;
+
         for (int i = 0; i < spawnedBubbles.Length; i++)
         {
             int index = ui.Index;
@@ -169,24 +210,27 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
 
             if (i == index - 1 || i == index + 1 || i == index + settings.GridSize.y || i == index - settings.GridSize.y)
             {
-                if (ui.Data.Stereotype == spawnedBubbles[i].Data.Stereotype)
+                chance += 0.25f;
+
+                if (ui.Data.Stereotype == spawnedBubbles[i].Data.Stereotype &&
+                    ui.Data.Opinion.Type == spawnedBubbles[i].Data.Opinion.Type)
                     continue;
 
-                if (power >= spawnedBubbles[i].Data.Stereotype.Power)
+                if (chance >= UnityEngine.Random.value && power >= spawnedBubbles[i].Data.Stereotype.Power)
                 {
                     spawnedBubbles[i].SetData(ui.Data);
-                    currentColoredOpinionCount++;
+                    sideCount[(int)ui.Data.Side]++;
+                    break;
                 }
             }
         }
+
+        ui.ResetData();
     }
 
     private void RemoveBubble(BubbleItemUI ui)
     {
-        if (ui.Data.Side != Side.Neutral)
-        {
-            currentColoredOpinionCount--;
-        }
+        sideCount[(int)ui.Data.Side]--;
 
         for (int i = 0; i < spawnedBubbles.Length; i++)
         {
@@ -204,7 +248,12 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
         int index = ui.Index;
         RemoveBubble(ui);
 
-        BubbleItemUI newUI = SpawnBubble();
+        OpinionType opinionType = (OpinionType)UnityEngine.Random.Range(0, currentLevel.OpinionTypeCount);
+        while (opinionType == ui.Data.Opinion.Type)
+        {
+            opinionType = (OpinionType)UnityEngine.Random.Range(0, currentLevel.OpinionTypeCount);
+        }
+        BubbleItemUI newUI = SpawnBubble(opinionType);
         newUI.SetIndex(index);
         spawnedBubbles[index] = newUI;
     }
@@ -242,17 +291,40 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
 
     private void HandleOnBubbleTimeout(BubbleItemUI ui)
     {
-        if (ui.Data.Side != Side.Neutral)
+        if (ui.Data.Opinion.Type == OpinionType.Hoax)
         {
             SpreadBubble(ui);
         }
+        else
+        {
+            RespawnBubble(ui);
+        }
+    }
 
-        RespawnBubble(ui);
+    private void HandleOnSliderMoralityValueChanged(float value)
+    {
+        view.bgMorality.SetInteger("Moral", Mathf.RoundToInt(value));
+    }
+
+    private void HandleOnGameOver(GameOverReason reason)
+    {
+        view.gameOverUI.gameObject.SetActive(true);
+    }
+
+    private void HandleOnFinishLevel()
+    {
+        view.levelCompleteUI.gameObject.SetActive(true);
     }
 
     private void HandleOnRestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void HandleOnNextLevel()
+    {
+        currentLevelIndex = Mathf.Clamp(currentLevelIndex + 1, 0, settings.LevelDatas.Length - 1);
+        StartGame();
     }
 }
 
@@ -267,4 +339,6 @@ public enum OpinionType
 {
     Branding,
     Hoax,
+    Notes,
+    HateSpeech,
 }

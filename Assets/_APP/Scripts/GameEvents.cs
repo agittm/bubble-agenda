@@ -4,6 +4,7 @@ public static class GameEvents
 {
     public static Action<BubbleItemUI> OnSpawnBubble;
     public static Action<BubbleItemUI> OnSelectBubble;
+    public static Action OnFinishLevel;
     public static Action<GameOverReason> OnGameOver;
 }
 

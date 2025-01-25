@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: fe7c012c25c3cca42b52019b8a8481f1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2864371568323438326
+    second: Low_1_0
+  - first:
+      213: 6045254521516789321
+    second: Low_1_1
+  - first:
+      213: 7642895923796938471
+    second: Low_1_2
+  - first:
+      213: -662137487634934739
+    second: Low_1_3
+  - first:
+      213: 4812808021382907879
+    second: Low_1_4
+  - first:
+      213: 3145185678565325219
+    second: Low_1_5
+  - first:
+      213: 7191801892594497174
+    second: Low_1_6
+  - first:
+      213: 1058663574536231901
+    second: Low_1_7
+  - first:
+      213: -4900826045989045253
+    second: Low_1_8
+  - first:
+      213: -1806078025319150174
+    second: Low_1_9
+  - first:
+      213: -4361697697571839579
+    second: Low_1_10
+  - first:
+      213: -3077627675060661286
+    second: Low_1_11
+  - first:
+      213: 7965183399619427389
+    second: Low_1_12
+  - first:
+      213: 1214683563680166553
+    second: Low_1_13
+  - first:
+      213: 3609207515506775457
+    second: Low_1_14
+  - first:
+      213: -1850172728269159695
+    second: Low_1_15
+  - first:
+      213: -6473184539991443800
+    second: Low_1_16
+  - first:
+      213: 7394859840043097612
+    second: Low_1_17
+  - first:
+      213: 5386923514563709847
+    second: Low_1_18
+  - first:
+      213: 1179296559379804586
+    second: Low_1_19
+  - first:
+      213: 5912055886497138956
+    second: Low_1_20
+  - first:
+      213: -5197143724998995581
+    second: Low_1_21
+  - first:
+      213: -7854779080939338239
+    second: Low_1_22
+  - first:
+      213: 17248812754463275
+    second: Low_1_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Low_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 904
+        width: 244
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f6a5aae3ca40c720800000000000000
+      internalID: 2864371568323438326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_1
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 936
+        width: 217
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94e05db45fe05e350800000000000000
+      internalID: 6045254521516789321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_2
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 932
+        width: 144
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee82315955011a60800000000000000
+      internalID: 7642895923796938471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_3
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 973
+        width: 102
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24dc01967d9fc6f0800000000000000
+      internalID: -662137487634934739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_4
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 972
+        width: 102
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e7cda665678ac240800000000000000
+      internalID: 4812808021382907879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_5
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 932
+        width: 144
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a93883f5b1f5ab20800000000000000
+      internalID: 3145185678565325219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_6
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 936
+        width: 217
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 696b31fa7b96ec360800000000000000
+      internalID: 7191801892594497174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_7
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 904
+        width: 244
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddb90e879e021be00800000000000000
+      internalID: 1058663574536231901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 812
+        width: 238
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb37d64da4ccfbb0800000000000000
+      internalID: -4900826045989045253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 799
+        width: 117
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ad8630ea958fe6e0800000000000000
+      internalID: -1806078025319150174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_10
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 812
+        width: 238
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a16796ad032873c0800000000000000
+      internalID: -4361697697571839579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_11
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 799
+        width: 117
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad3191d7fe11a45d0800000000000000
+      internalID: -3077627675060661286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 245
+        width: 117
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c7721c9140a8e60800000000000000
+      internalID: 7965183399619427389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 152
+        width: 238
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99279a7f34c6bd010800000000000000
+      internalID: 1214683563680166553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_14
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 152
+        width: 238
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a5937aec1b761230800000000000000
+      internalID: 3609207515506775457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_15
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 245
+        width: 117
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f2c66ec4bdd256e0800000000000000
+      internalID: -1850172728269159695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 244
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a6724015f0aa26a0800000000000000
+      internalID: -6473184539991443800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_17
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 217
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0e129948d1df9660800000000000000
+      internalID: 7394859840043097612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_18
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 0
+        width: 144
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79bc4c5356232ca40800000000000000
+      internalID: 5386923514563709847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_19
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 0
+        width: 102
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa17caaf8f3bd5010800000000000000
+      internalID: 1179296559379804586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_20
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 0
+        width: 102
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c094bee5187db0250800000000000000
+      internalID: 5912055886497138956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_21
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 0
+        width: 144
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 381d8c8515900e7b0800000000000000
+      internalID: -5197143724998995581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_22
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 0
+        width: 217
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1060173da083ef290800000000000000
+      internalID: -7854779080939338239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Low_1_23
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 0
+        width: 244
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ae60d24b74d3000800000000000000
+      internalID: 17248812754463275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Low_1_0: 2864371568323438326
+      Low_1_1: 6045254521516789321
+      Low_1_10: -4361697697571839579
+      Low_1_11: -3077627675060661286
+      Low_1_12: 7965183399619427389
+      Low_1_13: 1214683563680166553
+      Low_1_14: 3609207515506775457
+      Low_1_15: -1850172728269159695
+      Low_1_16: -6473184539991443800
+      Low_1_17: 7394859840043097612
+      Low_1_18: 5386923514563709847
+      Low_1_19: 1179296559379804586
+      Low_1_2: 7642895923796938471
+      Low_1_20: 5912055886497138956
+      Low_1_21: -5197143724998995581
+      Low_1_22: -7854779080939338239
+      Low_1_23: 17248812754463275
+      Low_1_3: -662137487634934739
+      Low_1_4: 4812808021382907879
+      Low_1_5: 3145185678565325219
+      Low_1_6: 7191801892594497174
+      Low_1_7: 1058663574536231901
+      Low_1_8: -4900826045989045253
+      Low_1_9: -1806078025319150174
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stereotypeName: Gen A
   bubbleIcon: {fileID: 21300000, guid: 6460480039abc5f41a5d7fc3c8641ede, type: 3}
-  minTimelimit: 24
-  maxTimelimit: 28
   power: 25
+  timeMultiplier: 1.3

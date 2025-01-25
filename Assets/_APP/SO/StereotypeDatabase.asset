@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: StereotypeDatabase
   m_EditorClassIdentifier: 
   stereotypes:
-  - {fileID: 11400000, guid: 319d1a9eef2b4f242a921ea949255198, type: 2}
-  - {fileID: 11400000, guid: 2cae4e73cc7758745bbf90a900489f88, type: 2}
+  - {fileID: 11400000, guid: 1f3965d6166b3ca4a84bc2d297c58b8a, type: 2}
   - {fileID: 11400000, guid: 54920e9cb69823c4abdeb414daddfb2b, type: 2}
   - {fileID: 11400000, guid: 998d55daa20653341aa6b8ab122b1998, type: 2}
+  - {fileID: 11400000, guid: 319d1a9eef2b4f242a921ea949255198, type: 2}
+  - {fileID: 11400000, guid: 2cae4e73cc7758745bbf90a900489f88, type: 2}
   - {fileID: 11400000, guid: 1ed96c2e359303341ad3b3aa96c32e32, type: 2}
-  - {fileID: 11400000, guid: 1f3965d6166b3ca4a84bc2d297c58b8a, type: 2}

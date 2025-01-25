@@ -1,0 +1,884 @@
+fileFormatVersion: 2
+guid: 4d4964b4db21b4b47b43bda27fa8d3f2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8722660572499417334
+    second: High_3_0
+  - first:
+      213: 2650407656399815143
+    second: High_3_1
+  - first:
+      213: 4114588653223609835
+    second: High_3_2
+  - first:
+      213: 7822384807919139475
+    second: High_3_3
+  - first:
+      213: -7753361088991369960
+    second: High_3_4
+  - first:
+      213: -7137148931572363750
+    second: High_3_5
+  - first:
+      213: -5137546012062613899
+    second: High_3_6
+  - first:
+      213: 8103496194352840391
+    second: High_3_7
+  - first:
+      213: 2017863976520212815
+    second: High_3_8
+  - first:
+      213: 4021851686900336181
+    second: High_3_9
+  - first:
+      213: -509530523021998710
+    second: High_3_10
+  - first:
+      213: 3310750240445181498
+    second: High_3_11
+  - first:
+      213: -8871202646349557658
+    second: High_3_12
+  - first:
+      213: 6223175345387573024
+    second: High_3_13
+  - first:
+      213: -8697329993895363344
+    second: High_3_14
+  - first:
+      213: 1678945442980122234
+    second: High_3_15
+  - first:
+      213: -5986498396259306992
+    second: High_3_16
+  - first:
+      213: -1460208369770673749
+    second: High_3_17
+  - first:
+      213: 2214688885382626062
+    second: High_3_18
+  - first:
+      213: 1835559842734324981
+    second: High_3_19
+  - first:
+      213: 5535668223319401736
+    second: High_3_20
+  - first:
+      213: 1214376193370803591
+    second: High_3_21
+  - first:
+      213: -2735595380350235701
+    second: High_3_22
+  - first:
+      213: -8911302408144657972
+    second: High_3_23
+  - first:
+      213: 3126556463574167807
+    second: High_3_24
+  - first:
+      213: -174278250896958919
+    second: High_3_25
+  - first:
+      213: -842236045209189137
+    second: High_3_26
+  - first:
+      213: -8530059277119176490
+    second: High_3_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: High_3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 893
+        width: 151
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07edd78c62e2f680800000000000000
+      internalID: -8722660572499417334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 617
+        width: 393
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1cfa598b328c420800000000000000
+      internalID: 2650407656399815143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 919
+        width: 167
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be50f308494f91930800000000000000
+      internalID: 4114588653223609835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_3
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 703
+        width: 353
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39abe6cb981be8c60800000000000000
+      internalID: 7822384807919139475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_4
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 758
+        width: 265
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 815655b2b27866490800000000000000
+      internalID: -7753361088991369960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_5
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 843
+        width: 154
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1e02986cd0c3fc90800000000000000
+      internalID: -7137148931572363750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_6
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 910
+        width: 77
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57e78c53f15c3b8b0800000000000000
+      internalID: -5137546012062613899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_7
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 808
+        width: 104
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ce7127cad6657070800000000000000
+      internalID: 8103496194352840391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_8
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 861
+        width: 63
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f416b857894e00c10800000000000000
+      internalID: 2017863976520212815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_9
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 886
+        width: 25
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5360001fccc70d730800000000000000
+      internalID: 4021851686900336181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_10
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 920
+        width: 12
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a850e0d50b8cde8f0800000000000000
+      internalID: -509530523021998710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_11
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 962
+        width: 15
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3e26c57dc522fd20800000000000000
+      internalID: 3310750240445181498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_12
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 953
+        width: 36
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66054ddd13823e480800000000000000
+      internalID: -8871202646349557658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_13
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 819
+        width: 87
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02f8bcc31092d5650800000000000000
+      internalID: 6223175345387573024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_14
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 835
+        width: 107
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fc34837370ec4780800000000000000
+      internalID: -8697329993895363344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_15
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 790
+        width: 184
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7e47162cffcc4710800000000000000
+      internalID: 1678945442980122234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_16
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 792
+        width: 209
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012b48a2d6fabeca0800000000000000
+      internalID: -5986498396259306992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_17
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 771
+        width: 283
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba944c5693c4cbbe0800000000000000
+      internalID: -1460208369770673749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_18
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 691
+        width: 339
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0bbc3daec72cbe10800000000000000
+      internalID: 2214688885382626062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_19
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 871
+        width: 215
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fcb626a3f7397910800000000000000
+      internalID: 1835559842734324981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 542
+        width: 388
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 805ee5d7be4a2dc40800000000000000
+      internalID: 5535668223319401736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_21
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 576
+        width: 411
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78dce8db6b45ad010800000000000000
+      internalID: 1214376193370803591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_22
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 548
+        width: 340
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcb4601de76390ad0800000000000000
+      internalID: -2735595380350235701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_23
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 449
+        width: 286
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc164748ca1b45480800000000000000
+      internalID: -8911302408144657972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 460
+        width: 210
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff03a85d982c36b20800000000000000
+      internalID: 3126556463574167807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_25
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 417
+        width: 236
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ad53baad6d49df0800000000000000
+      internalID: -174278250896958919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 769
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4c64c77c6cf44f0800000000000000
+      internalID: -842236045209189137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: High_3_27
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 0
+        width: 769
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d0494a18442f9980800000000000000
+      internalID: -8530059277119176490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      High_3_0: -8722660572499417334
+      High_3_1: 2650407656399815143
+      High_3_10: -509530523021998710
+      High_3_11: 3310750240445181498
+      High_3_12: -8871202646349557658
+      High_3_13: 6223175345387573024
+      High_3_14: -8697329993895363344
+      High_3_15: 1678945442980122234
+      High_3_16: -5986498396259306992
+      High_3_17: -1460208369770673749
+      High_3_18: 2214688885382626062
+      High_3_19: 1835559842734324981
+      High_3_2: 4114588653223609835
+      High_3_20: 5535668223319401736
+      High_3_21: 1214376193370803591
+      High_3_22: -2735595380350235701
+      High_3_23: -8911302408144657972
+      High_3_24: 3126556463574167807
+      High_3_25: -174278250896958919
+      High_3_26: -842236045209189137
+      High_3_27: -8530059277119176490
+      High_3_3: 7822384807919139475
+      High_3_4: -7753361088991369960
+      High_3_5: -7137148931572363750
+      High_3_6: -5137546012062613899
+      High_3_7: 8103496194352840391
+      High_3_8: 2017863976520212815
+      High_3_9: 4021851686900336181
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

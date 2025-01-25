@@ -1,0 +1,36 @@
+﻿title: Start
+tags: 
+colorID: 0
+position: 0,0
+---
+
+Di dunia distopia ini, orang-orang saling mempertahankan ego dan opininya masing-masing.
+Semua tindakan yang dilakukan oleh mereka tidak dipikirkan lebih jauh lagi sehingga menyebabkan kekacauan di mana-mana.
+Akibat dari opini yang menguntungkan pribadi serta penyebaran hoax yang ditampilkan di media, banyak orang yang menonton siaran tersebut terpancing dan percaya terhadap hoax yang ditampilkan.
+Dalam hal ini, dibangun sebuah badan negara baru untuk melakukan penyensoran terhadap adegan dan opini yang dilontarkan oleh publik dalam siaran televisi,
+di mana kamu hadir sebagai karyawan baru badan tersebut dengan tujuan menjaga stabilitas sosial sehingga tidak menyebabkan kerusuhan terhadap informasi yang disampaikan di televisi.
+
+// adds actor named "Eve" using sprite "cool-girl", placed in left-half + center of screen, with green text label
+<<Act Eve cool-girl left center green>>
+
+Eve: Selamat datang karyawan baru
+Eve: Ini hari pertamamu untuk bekerja di Badan Sensor Penyiaran.
+Eve: Biar kuperkenalkan padamu tugas penting yang harus kamu lakukan.
+Eve: Tugasmu adalah untuk menyensor bubble yang akan ditampilkan dalam layar ini,
+Eve: sehingga moral kita tetap terjaga.
+Eve: Kamu sudah mengerti?
+
+// Yarn shortcut choices, an easy way to make branching options
+-> Ya, mengerti
+-> Siap, mengerti
+
+Eve: Ok, bagus
+<<Flip Eve>>
+<<Move Eve 1.25 center 1.0>>
+
+// fade to black, from 0% opacity to 100% opacity, in 2.0 seconds
+<<Fade black 0.0 1.0 2.0>>
+THE END.
+<<Fade black 1.0 0.0 2.0>>
+WHAT
+===

@@ -7,8 +7,8 @@ public class StereotypeDatabase : ScriptableObject
 
     public Stereotype[] Stereotypes => stereotypes;
 
-    public Stereotype GetRandom()
+    public Stereotype GetRandom(int maxRange)
     {
-        return stereotypes[Random.Range(0, stereotypes.Length)];
+        return stereotypes[Random.Range(0, Mathf.Min(maxRange, stereotypes.Length))];
     }
 }

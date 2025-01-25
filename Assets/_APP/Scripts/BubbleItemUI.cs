@@ -8,7 +8,8 @@ public class BubbleItemUI : MonoBehaviour
     [SerializeField] protected Image bubble;
     [SerializeField] protected Image icon;
     [SerializeField] protected Button button;
-    [SerializeField] protected Slider sliderTime;
+    [SerializeField] protected GameObject panelHoaxTime;
+    [SerializeField] protected Image bubbleTimeImage;
 
     [Header("Settings")]
     [SerializeField] protected Sprite[] iconByTypes;
@@ -21,6 +22,8 @@ public class BubbleItemUI : MonoBehaviour
     public int Index => index;
 
     private bool isRunning;
+    private float bubbleTime;
+    private float bubbleDuration;
 
     private System.Action<BubbleItemUI> OnClick;
     private System.Action<BubbleItemUI> OnTimeOut;
@@ -29,12 +32,14 @@ public class BubbleItemUI : MonoBehaviour
     {
         button.onClick.AddListener(HandleOnClick);
         GameEvents.OnGameOver += HandleOnGameOver;
+        GameEvents.OnFinishLevel += HandleOnFinishLevel;
     }
 
     private void OnDestroy()
     {
         button.onClick.RemoveListener(HandleOnClick);
         GameEvents.OnGameOver -= HandleOnGameOver;
+        GameEvents.OnFinishLevel -= HandleOnFinishLevel;
     }
 
     private void Update()
@@ -45,9 +50,10 @@ public class BubbleItemUI : MonoBehaviour
         if (!isRunning)
             return;
 
-        sliderTime.value -= Time.deltaTime;
+        bubbleTime -= Time.deltaTime;
+        bubbleTimeImage.fillAmount = bubbleTime / bubbleDuration;
 
-        if (sliderTime.value == 0)
+        if (bubbleTime <= 0)
         {
             isRunning = false;
             animator.SetTrigger("Timeout");
@@ -63,14 +69,13 @@ public class BubbleItemUI : MonoBehaviour
 
     public void SetData(BubbleData data)
     {
+        if (this.data != null)
+        {
+            animator.SetTrigger("Timeout");
+        }
+
         this.data = data;
-
-        sliderTime.minValue = 0;
-        sliderTime.maxValue = this.data.Stereotype.Timelimit;
-        sliderTime.value = this.data.Stereotype.Timelimit;
-        isRunning = true;
-
-        SetupUI();
+        ResetData();
     }
 
     public void SetIndex(int index)
@@ -79,11 +84,21 @@ public class BubbleItemUI : MonoBehaviour
         transform.SetSiblingIndex(index);
     }
 
+    public void ResetData()
+    {
+        bubbleTime = data.Opinion.Timelimit;
+        bubbleDuration = data.Opinion.Timelimit;
+        isRunning = bubbleTime > 0;
+        panelHoaxTime.SetActive(isRunning);
+
+        SetupUI();
+    }
+
     private void SetupUI()
     {
         bubble.sprite = data.Stereotype.BubbleIcon;
         icon.color = colorByTypes[(int)data.Side];
-        icon.sprite = iconByTypes[(int)data.OpinionType];
+        icon.sprite = iconByTypes[(int)data.Opinion.Type];
     }
 
     private IEnumerator ClickProcess(float delay)
@@ -99,6 +114,11 @@ public class BubbleItemUI : MonoBehaviour
     }
 
     private void HandleOnGameOver(GameOverReason reason)
+    {
+        isRunning = false;
+    }
+
+    private void HandleOnFinishLevel()
     {
         isRunning = false;
     }

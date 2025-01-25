@@ -13,7 +13,29 @@ MonoBehaviour:
   m_Name: GameplaySettings
   m_EditorClassIdentifier: 
   gridSize: {x: 4, y: 3}
+  defaultHoaxTime: 5
+  defaultBrandingTime: 7
+  defaultSmileyTime: 8
   costBalance: 10
   costMorality: 1
-  initialMoral: 5
+  initialMoral: 0
   maxMoral: 10
+  levelDatas:
+  - currentStereotypeCount: 1
+    currentSideCount: 1
+    currentMinMaxSide: {x: 4, y: 4}
+  - currentStereotypeCount: 2
+    currentSideCount: 1
+    currentMinMaxSide: {x: 4, y: 4}
+  - currentStereotypeCount: 3
+    currentSideCount: 3
+    currentMinMaxSide: {x: 4, y: 4}
+  - currentStereotypeCount: 4
+    currentSideCount: 3
+    currentMinMaxSide: {x: 4, y: 4}
+  - currentStereotypeCount: 5
+    currentSideCount: 3
+    currentMinMaxSide: {x: 4, y: 4}
+  - currentStereotypeCount: 6
+    currentSideCount: 3
+    currentMinMaxSide: {x: 4, y: 4}
