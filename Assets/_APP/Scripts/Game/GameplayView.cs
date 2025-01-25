@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Yarn.Unity.Example;
 
 public class GameplayView : MonoBehaviour
 {
@@ -15,5 +14,5 @@ public class GameplayView : MonoBehaviour
     public PauseUI pauseUI;
     public GameOverUI gameOverUI;
     public LevelCompleteUI levelCompleteUI;
-    public VNManager vnManager;
+    public DialogUI dialogUI;
 }

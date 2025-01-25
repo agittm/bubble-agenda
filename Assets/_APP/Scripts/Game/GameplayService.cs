@@ -1,3 +1,4 @@
+using Hellmade.Sound;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -44,6 +45,10 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
     {
         currentLevelIndex = 0;
         StartGame();
+        ShowDialog("intro", 0, () =>
+        {
+            ShowDialog("intro2", 1);
+        });
     }
 
     void ITickable.Tick()
@@ -361,6 +366,11 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
         view.sliderMorality.value -= 1;
     }
 
+    private void ShowDialog(string code, float delay = 0, System.Action OnFinished = null)
+    {
+        view.dialogUI.Show(settings.GetDialogContents(code), delay, OnFinished);
+    }
+
     private void HandleOnClickBubble(BubbleItemUI ui)
     {
         ClickBubble(ui);
@@ -433,11 +443,13 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
 
     private void HandleOnGameOver(GameOverReason reason)
     {
+        EazySoundManager.PlayUISound(settings.GameOverClip);
         view.gameOverUI.gameObject.SetActive(true);
     }
 
     private void HandleOnFinishLevel()
     {
+        EazySoundManager.PlayUISound(settings.LevelCompleteClip);
         view.levelCompleteUI.gameObject.SetActive(true);
     }
 

@@ -30,6 +30,36 @@ public class GameplaySettings : ScriptableObject
     [SerializeField] private Vector2 grid3CountToSize;
     public Vector2 Grid3CountToSize => grid3CountToSize;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip levelCompleteClip;
+    public AudioClip LevelCompleteClip => levelCompleteClip;
+
+    [SerializeField] private AudioClip gameOverClip;
+    public AudioClip GameOverClip => gameOverClip;
+
     [SerializeField] private GameLevelData[] levelDatas;
     public GameLevelData[] LevelDatas => levelDatas;
+
+    [SerializeField] private DialogData[] dialogDatas;
+
+    public string[] GetDialogContents(string code)
+    {
+        for (int i = 0; i < dialogDatas.Length; i++)
+        {
+            if (dialogDatas[i].Code == code)
+                return dialogDatas[i].Contents;
+        }
+
+        return new string[0];
+    }
+}
+
+[System.Serializable]
+public class DialogData
+{
+    [SerializeField] private string code;
+    public string Code => code;
+
+    [SerializeField, TextArea] string[] contents;
+    public string[] Contents => contents;
 }

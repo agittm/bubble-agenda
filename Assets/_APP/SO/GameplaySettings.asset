@@ -21,6 +21,8 @@ MonoBehaviour:
   maxMoral: 10
   grid2CountToSize: {x: 280, y: 280}
   grid3CountToSize: {x: 240, y: 190}
+  levelCompleteClip: {fileID: 8300000, guid: b2e71d82116e6b6438dcd55097afb107, type: 3}
+  gameOverClip: {fileID: 8300000, guid: 74f7835c45f39cd419bf0e11cad3dd5d, type: 3}
   levelDatas:
   - gridSize: {x: 2, y: 2}
     opinionTypeCount: 2
@@ -62,3 +64,30 @@ MonoBehaviour:
     currentStereotypeCount: 6
     currentSideCount: 3
     currentMinMaxSide: {x: 4, y: 4}
+  dialogDatas:
+  - code: intro
+    contents:
+    - Welcome new employees, this is your first day working at the Broadcasting Censorship
+      Agency.
+    - Let me introduce you to the important tasks you have to do.
+    - Your task is to censor the bubbles that will be displayed on this screen, so
+      that our morale is maintained.
+    - Got it?
+  - code: intro2
+    contents:
+    - "Now let\u2019s see on the screen, there are several boxes containing bubbles
+      with different information."
+    - Focus on this hoax icon with horns.
+    - People who have this icon have a habit of spreading hoaxes, so that the people
+      around them are influenced to spread similar hoaxes.
+  - code: moral
+    contents:
+    - Now, focus to this star icon.
+    - This is the good information from people.
+    - Spread this information to help people avoid the hoaxes.
+    - Help us to protect people from hoax by pressing the hoax icon.
+  - code: clear-level-1
+    contents:
+    - Wow, the moral value has been increased while you remove a hoax circulating
+      in the public. But, if you remove good information, you will lose the moral
+      values that led to our Agency's end.
