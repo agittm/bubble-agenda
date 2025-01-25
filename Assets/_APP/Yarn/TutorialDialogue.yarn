@@ -10,19 +10,15 @@ Akibat dari opini yang menguntungkan pribadi serta penyebaran hoax yang ditampil
 Dalam hal ini, dibangun sebuah badan negara baru untuk melakukan penyensoran terhadap adegan dan opini yang dilontarkan oleh publik dalam siaran televisi,
 di mana kamu hadir sebagai karyawan baru badan tersebut dengan tujuan menjaga stabilitas sosial sehingga tidak menyebabkan kerusuhan terhadap informasi yang disampaikan di televisi.
 
-// adds actor named "Eve" using sprite "cool-girl", placed in left-half + center of screen, with green text label
-<<Act Eve cool-girl left center green>>
+<<Act Eve robot left center green>>
 
-Eve: Selamat datang karyawan baru
-Eve: Ini hari pertamamu untuk bekerja di Badan Sensor Penyiaran.
-Eve: Biar kuperkenalkan padamu tugas penting yang harus kamu lakukan.
-Eve: Tugasmu adalah untuk menyensor bubble yang akan ditampilkan dalam layar ini,
-Eve: sehingga moral kita tetap terjaga.
-Eve: Kamu sudah mengerti?
-
-// Yarn shortcut choices, an easy way to make branching options
--> Ya, mengerti
--> Siap, mengerti
+Eve: Welcome new employees, this is your first day working at the Broadcasting Censorship Agency.
+Eve: Let me introduce you to the important tasks you have to do.
+Eve: Your task is to censor the bubbles that will be displayed on this screen, so that our morale is maintained.
+Eve: Got it?
+Eve: Now let’s see on the screen, there are several boxes containing bubbles with different information.
+Eve: Focus on this hoax icon with horns.
+Eve: People who have this icon have a habit of spreading hoaxes, so that the people around them are influenced to spread similar hoaxes.
 
 Eve: Ok, bagus
 <<Flip Eve>>

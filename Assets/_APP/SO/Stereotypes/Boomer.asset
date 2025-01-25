@@ -16,3 +16,6 @@ MonoBehaviour:
   bubbleIcon: {fileID: 21300000, guid: a77b5e5173886f9499b48b318c6e1beb, type: 3}
   power: 10
   timeMultiplier: 2
+  appearClip: {fileID: 8300000, guid: 6cbc0333d43170f40b833c8b36f8e98a, type: 3}
+  clickedClip: {fileID: 8300000, guid: bdea15ac791e85c41bd60bcc69d88fdc, type: 3}
+  timeoutClip: {fileID: 8300000, guid: f4504b5ebf2524344b4bc9417377c09e, type: 3}
