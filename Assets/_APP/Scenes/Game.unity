@@ -445,8 +445,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 776.06, y: -265}
-  m_SizeDelta: {x: 367.87878, y: 727.27277}
+  m_AnchoredPosition: {x: 776.06, y: -214}
+  m_SizeDelta: {x: 310.30304, y: 310.30304}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &544720577
 MonoBehaviour:
@@ -470,7 +470,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 6e7c75b8e2c90a04a834c2cb538d4e08, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -803,8 +803,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1556,7 +1556,6 @@ MonoBehaviour:
   gameOverUI: {fileID: 5230354668533841432}
   levelCompleteUI: {fileID: 4633671202963380252}
   dialogUI: {fileID: 1432297250}
-  vnManager: {fileID: 2140520166517372678}
 --- !u!4 &1425942921
 Transform:
   m_ObjectHideFlags: 0
@@ -2234,29 +2233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddcdd604a328c4ab296f048eb7b3a925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasGroup: {fileID: 5287676942755539635}
-  useFadeEffect: 1
-  fadeInTime: 0
-  fadeOutTime: 0
-  lineText: {fileID: 4784075869756644546}
-  showCharacterNameInLineView: 1
-  characterNameText: {fileID: 4069583822942354232}
-  characterNameContainer: {fileID: 0}
-  useTypewriterEffect: 1
-  onCharacterTyped:
-    m_PersistentCalls:
-      m_Calls: []
-  onPauseStarted:
-    m_PersistentCalls:
-      m_Calls: []
-  onPauseEnded:
-    m_PersistentCalls:
-      m_Calls: []
-  typewriterEffectSpeed: 80
-  continueButton: {fileID: 5199325493987380631}
-  holdTime: 1
-  autoAdvance: 0
-  palette: {fileID: 0}
 --- !u!222 &1882865054858142458
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2277,19 +2253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f32f908a5685c01479c697cf70d86264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runner: {fileID: 7856556113634513534}
-  loadSprites:
-  - {fileID: 21300000, guid: 6e7c75b8e2c90a04a834c2cb538d4e08, type: 3}
-  loadAudio: []
-  useResourcesFolders: 0
-  defaultTint: {r: 0.721237, g: 0.79072744, b: 0.8455882, a: 1}
-  highlightTint: {r: 1, g: 1, b: 1, a: 1}
-  spriteGroup: {fileID: 5420540371382087531}
-  bgImage: {fileID: 5311950592551353285}
-  fadeBG: {fileID: 5312651770321617627}
-  nameplateBG: {fileID: 5311765498926147877}
-  genericSprite: {fileID: 5311346443848086671}
-  genericAudioSource: {fileID: 5262397955787757679}
 --- !u!224 &2714661818502659715
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2321,8 +2284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 610c541718d694070a21327d1ae62e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showDebug: 1
-  debugTextView: {fileID: 5311251901262557647}
 --- !u!225 &3356751656830790111
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4234,38 +4195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2a56d6679de44298207eec0bbcf044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 0.8745098, g: 0.8745098, b: 0.8745098, a: 0.88235295}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.61960787, g: 0.61960787, b: 0.61960787, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.36078432, g: 0.36078432, b: 0.36078432, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 5311429901699097691}
-  text: {fileID: 3987560112655491173}
-  showCharacterName: 0
-  palette: {fileID: 0}
 --- !u!4 &6123808120888125960
 Transform:
   m_ObjectHideFlags: 0
@@ -4298,44 +4227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yarnProject: {fileID: 7545569452688597077, guid: 6573e22e697ab4619b968b6ce2f80243, type: 3}
-  _variableStorage: {fileID: 3067373551148531973}
-  dialogueViews:
-  - {fileID: 2140520166517372678}
-  - {fileID: 1619810375451238994}
-  - {fileID: 8159634806240395095}
-  startNode: Start
-  startAutomatically: 1
-  runSelectedOptionAsLine: 0
-  lineProvider: {fileID: 0}
-  verboseLogging: 1
-  onNodeStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onNodeComplete:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: NodeComplete
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDialogueStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onDialogueComplete:
-    m_PersistentCalls:
-      m_Calls: []
-  onCommand:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &8159634806240395095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4348,15 +4239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ac0c40fc910845709d9cef7c876cb99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasGroup: {fileID: 3356751656830790111}
-  optionViewPrefab: {fileID: 5599766474708036296}
-  palette: {fileID: 0}
-  fadeTime: 0
-  showUnavailableOptions: 0
-  lastLineText: {fileID: 0}
-  lastLineContainer: {fileID: 0}
-  lastLineCharacterNameText: {fileID: 0}
-  lastLineCharacterNameContainer: {fileID: 0}
 --- !u!1001 &9160439501285693677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4466,51 +4348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f11a531473e24a4dbf90be71b6fd866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onNameUpdate:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5199077571302894877}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  onDialogueStarted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5199077571302894877}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onNameNotPresent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5199077571302894877}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

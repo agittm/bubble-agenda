@@ -47,7 +47,10 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
         StartGame();
         ShowDialog("intro", 0, () =>
         {
-            ShowDialog("intro2", 1);
+            ShowDialog("hoax", 1, () =>
+            {
+                ShowDialog("branding", 1);
+            });
         });
     }
 
@@ -90,6 +93,19 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
         view.textLevel.text = $"{currentLevelIndex + 1}";
 
         SpawnBubbles(currentLevel.GridSize.x * currentLevel.GridSize.y);
+
+        if (currentLevelIndex == 1)
+        {
+            ShowDialog("level2", 0.5f);
+        }
+        else if (currentLevelIndex == 2)
+        {
+            ShowDialog("level3", 0.5f);
+        }
+        else if (currentLevelIndex == 3)
+        {
+            ShowDialog("level4", 0.5f);
+        }
     }
 
     private void SpawnBubbles(int count)
