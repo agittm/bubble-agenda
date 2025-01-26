@@ -15,6 +15,9 @@ public class GameLevelData
     [SerializeField] private int currentSideCount = 1;
     public int CurrentSideCount => currentSideCount;
 
+    [SerializeField] private float costMorality = 1;
+    public float CostMorality => costMorality;
+
     [SerializeField] private Vector2Int currentMinMaxSide = new Vector2Int(4, 4);
     public Vector2Int CurrentMinMaxSide => currentMinMaxSide;
 }

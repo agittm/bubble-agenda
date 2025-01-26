@@ -15,9 +15,6 @@ public class GameplaySettings : ScriptableObject
     [SerializeField] private float costBalance = 10;
     public float CostBalance => costBalance;
 
-    [SerializeField] private int costMorality = 1;
-    public int CostMorality => costMorality;
-
     [SerializeField] private int initialMoral = 5;
     public int InitialMoral => initialMoral;
 

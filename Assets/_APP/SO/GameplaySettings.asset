@@ -16,7 +16,6 @@ MonoBehaviour:
   defaultBrandingTime: 7
   defaultSmileyTime: 8
   costBalance: 10
-  costMorality: 1
   initialMoral: 0
   maxMoral: 10
   grid2CountToSize: {x: 280, y: 280}
@@ -28,41 +27,67 @@ MonoBehaviour:
     opinionTypeCount: 2
     currentStereotypeCount: 1
     currentSideCount: 1
+    costMorality: 1
     currentMinMaxSide: {x: 4, y: 4}
   - gridSize: {x: 3, y: 2}
     opinionTypeCount: 2
     currentStereotypeCount: 2
     currentSideCount: 1
+    costMorality: 1
     currentMinMaxSide: {x: 4, y: 4}
   - gridSize: {x: 3, y: 2}
     opinionTypeCount: 4
     currentStereotypeCount: 2
     currentSideCount: 1
+    costMorality: 1
     currentMinMaxSide: {x: 4, y: 4}
   - gridSize: {x: 3, y: 2}
     opinionTypeCount: 4
     currentStereotypeCount: 3
     currentSideCount: 3
+    costMorality: 0.75
     currentMinMaxSide: {x: 4, y: 4}
   - gridSize: {x: 4, y: 3}
     opinionTypeCount: 4
     currentStereotypeCount: 3
     currentSideCount: 3
+    costMorality: 0.75
     currentMinMaxSide: {x: 4, y: 4}
   - gridSize: {x: 4, y: 3}
     opinionTypeCount: 4
     currentStereotypeCount: 4
     currentSideCount: 3
+    costMorality: 0.5
+    currentMinMaxSide: {x: 4, y: 4}
+  - gridSize: {x: 4, y: 3}
+    opinionTypeCount: 4
+    currentStereotypeCount: 4
+    currentSideCount: 3
+    costMorality: 0.5
     currentMinMaxSide: {x: 4, y: 4}
   - gridSize: {x: 4, y: 3}
     opinionTypeCount: 4
     currentStereotypeCount: 5
     currentSideCount: 3
+    costMorality: 0.5
+    currentMinMaxSide: {x: 4, y: 4}
+  - gridSize: {x: 4, y: 3}
+    opinionTypeCount: 4
+    currentStereotypeCount: 5
+    currentSideCount: 3
+    costMorality: 0.5
     currentMinMaxSide: {x: 4, y: 4}
   - gridSize: {x: 4, y: 3}
     opinionTypeCount: 4
     currentStereotypeCount: 6
     currentSideCount: 3
+    costMorality: 0.25
+    currentMinMaxSide: {x: 4, y: 4}
+  - gridSize: {x: 4, y: 3}
+    opinionTypeCount: 4
+    currentStereotypeCount: 6
+    currentSideCount: 3
+    costMorality: 0.25
     currentMinMaxSide: {x: 4, y: 4}
   dialogDatas:
   - code: intro
@@ -73,19 +98,19 @@ MonoBehaviour:
     - Your task is to censor the bubbles that will be displayed on this screen, so
       that our morale is maintained.
     - Got it?
+    - Time to learn some basics!
   - code: hoax
     contents:
-    - "Now let\u2019s see on the screen, there are several boxes containing bubbles
-      with different information."
-    - Focus on this hoax icon with horns.
+    - Focus on the screen, there are several boxes containing bubbles with different
+      information.
+    - Remember the hoax icon always come up with horns.
     - People who have this icon have a habit of spreading hoaxes, so that the people
       around them are influenced to spread similar hoaxes.
+    - Help us to protect people from hoax by pressing the hoax icon.
   - code: branding
     contents:
-    - Now, focus to this star icon.
-    - This is the good information from people.
+    - Let's see the star icon, this is the good information from people.
     - Spread this information to help people avoid the hoaxes.
-    - Help us to protect people from hoax by pressing the hoax icon.
     - The moral will increase while you remove a hoax circulating in the public.
     - But, if you remove good information, you will lose the moral values that led
       to our Agency's end.
@@ -98,18 +123,19 @@ MonoBehaviour:
     - At this stage, the public begins to discuss popular issues on social media
       platform.
     - "There are two new icons that will be shown, the \u201Chate speech\u201D which
-      indicates the user hates the issue and spreading hates between social media
-      users, and also a \u201Ccommunity note\u201D that help readers to understand
-      what is happening around."
+      indicates person with exlamation mark. The user hates the issue and spreading
+      hates between social media users. "
+    - "And the \u201Ccommunity note\u201D icon represented by chat bubble, that help
+      readers to understand what is happening around."
     - 'Eliminate hate speech from the public to prevent the chaos. '
   - code: level4
     contents:
-    - In the next stage, there were two parties covered by several television channels.
+    - In the next stage, we will have two parties covered by several television channels.
     - There are red and blue bar updates in the top of the bar to indicate a comparative
       relationship between the two parties expressed by their opinions.
     - Remove hoaxes by both parties.
-    - 'However, please note, when you delete a hoax from parties, the epicenter of
-      the bar will move to their related color. '
+    - 'However, please take a note. When you delete a hoax from parties, the epicenter
+      of the bar will move to their related color. '
     - 'Take control of the situation by removing hoax from both party to balance
       the bar. '
     - "And remember, any good and useful information from one party that\u2019s been

@@ -74,6 +74,7 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
     {
         view.gameOverUI.gameObject.SetActive(false);
         view.levelCompleteUI.gameObject.SetActive(false);
+        view.pauseUI.gameObject.SetActive(false);
         view.balancingBarUI.gameObject.SetActive(currentLevel.CurrentSideCount > 1);
 
         view.sliderMorality.minValue = 0;
@@ -374,12 +375,12 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
 
     private void AddMorality()
     {
-        view.sliderMorality.value += 1;
+        view.sliderMorality.value += currentLevel.CostMorality;
     }
 
     private void DecreaseMorality()
     {
-        view.sliderMorality.value -= 1;
+        view.sliderMorality.value -= currentLevel.CostMorality;
     }
 
     private void ShowDialog(string code, float delay = 0, System.Action OnFinished = null)
