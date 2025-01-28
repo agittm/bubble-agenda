@@ -39,6 +39,7 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
         view.pauseUI.Init(HandleOnResumeGame, HandleOnMainmenu);
         view.gameOverUI.Init(HandleOnRestartGame, HandleOnMainmenu);
         view.levelCompleteUI.Init(HandleOnNextLevel);
+        view.gameCompleteUI.Init(HandleOnMainmenu);
     }
 
     void IStartable.Start()
@@ -74,6 +75,7 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
     {
         view.gameOverUI.gameObject.SetActive(false);
         view.levelCompleteUI.gameObject.SetActive(false);
+        view.gameCompleteUI.gameObject.SetActive(false);
         view.pauseUI.gameObject.SetActive(false);
         view.balancingBarUI.gameObject.SetActive(currentLevel.CurrentSideCount > 1);
 
@@ -466,8 +468,18 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
 
     private void HandleOnFinishLevel()
     {
-        EazySoundManager.PlayUISound(settings.LevelCompleteClip);
-        view.levelCompleteUI.gameObject.SetActive(true);
+        if (currentLevelIndex < settings.LevelDatas.Length - 1)
+        {
+            EazySoundManager.PlayUISound(settings.LevelCompleteClip);
+            view.levelCompleteUI.gameObject.SetActive(true);
+        }
+        else
+        {
+            ShowDialog("closing", 1f, () =>
+            {
+                view.gameCompleteUI.gameObject.SetActive(true);
+            });
+        }
     }
 
     private void HandleOnResumeGame()

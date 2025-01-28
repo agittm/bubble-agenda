@@ -14,5 +14,6 @@ public class GameplayView : MonoBehaviour
     public PauseUI pauseUI;
     public GameOverUI gameOverUI;
     public LevelCompleteUI levelCompleteUI;
+    public LevelCompleteUI gameCompleteUI;
     public DialogUI dialogUI;
 }

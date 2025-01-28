@@ -11,4 +11,9 @@ public class MainmenuLifetimeScope : LifetimeScope
     {
         EazySoundManager.PlayMusic(bgm, 1f, true, false, 1f, 1f);
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

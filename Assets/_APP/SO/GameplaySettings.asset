@@ -83,12 +83,6 @@ MonoBehaviour:
     currentSideCount: 3
     costMorality: 0.25
     currentMinMaxSide: {x: 4, y: 4}
-  - gridSize: {x: 4, y: 3}
-    opinionTypeCount: 4
-    currentStereotypeCount: 6
-    currentSideCount: 3
-    costMorality: 0.25
-    currentMinMaxSide: {x: 4, y: 4}
   dialogDatas:
   - code: intro
     contents:
@@ -142,3 +136,26 @@ MonoBehaviour:
       deleted will help opposite party."
     - Raise your moral bar by removing hoaxes and hate speech icon and try to remain
       neutral by balance the party position
+  - code: closing
+    contents:
+    - 'Sigh... Turns out it''s also tiring to work on censoring public broadcasts.
+
+      What
+      do you think?'
+    - 'I think that''s enough for today''s work. It''s time for us to get home.
+
+      Pack
+      your things, turn off the computer.'
+    - Oh wait, the agency email got a message from someone, let's see.
+    - '"I am quite satisfied with the impressions shown on television." Pleased to
+      hear it.'
+    - And there is also "I always watch television shows with children, thank you
+      for not showing programs that are unhealthy for children to watch."
+    - Then... Oh, it's from the boss.
+    - He said, "Your performance is extraordinary, I really appreciate your efforts.
+      Maintain your performance, don't let the public media be driven by hoaxes or
+      news that is detrimental to everyone. Keep up the spirit."
+    - 'Wow, we got praise from the boss.
+
+      Good job new kid.'
+    - OK, please rest. We will continue work tomorrow.
