@@ -14,6 +14,15 @@ public class MainmenuLifetimeScope : LifetimeScope
 
     public void ExitGame()
     {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
         Application.Quit();
+#endif
+    }
+
+    public void ResetData()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }

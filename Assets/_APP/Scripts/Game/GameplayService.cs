@@ -45,6 +45,8 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
     void IStartable.Start()
     {
         currentLevelIndex = 0;
+        view.dialogUI.Hide();
+
         StartGame();
         ShowDialog("intro", 0, () =>
         {
@@ -385,8 +387,15 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
         view.sliderMorality.value -= currentLevel.CostMorality;
     }
 
-    private void ShowDialog(string code, float delay = 0, System.Action OnFinished = null)
+    private void ShowDialog(string code, float delay = 0, System.Action OnFinished = null, bool isForced = false)
     {
+        if (PlayerPrefs.HasKey($"dialog_{code}") && PlayerPrefs.GetInt($"dialog_{code}") == 1 && !isForced)
+        {
+            OnFinished?.Invoke();
+            return;
+        }
+
+        PlayerPrefs.SetInt($"dialog_{code}", 1);
         view.dialogUI.Show(settings.GetDialogContents(code), delay, OnFinished);
     }
 
@@ -475,10 +484,8 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
         }
         else
         {
-            ShowDialog("closing", 1f, () =>
-            {
-                view.gameCompleteUI.gameObject.SetActive(true);
-            });
+            view.gameCompleteUI.gameObject.SetActive(true);
+            ShowDialog("closing", 0.5f, null, true);
         }
     }
 
@@ -490,7 +497,9 @@ public class GameplayService : IInitializable, IStartable, ITickable, IDisposabl
 
     private void HandleOnRestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        view.sliderMorality.value = 0;
+        view.balancingBarUI.SetLeftValue(50);
+        StartGame();
     }
 
     private void HandleOnMainmenu()

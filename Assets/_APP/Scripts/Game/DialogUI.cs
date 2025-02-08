@@ -53,6 +53,11 @@ public class DialogUI : MonoBehaviour
         OnFinished?.Invoke();
     }
 
+    public void Hide()
+    {
+        panel.SetActive(false);
+    }
+
     private void HandleOnClickNext()
     {
         isClicked = true;
